@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">  
+    <link href="../dist/output.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/chillow" rel="stylesheet">
+    <title>Khedne Maak</title>
+</head>
+<body class="m-4 md:m-8 p-0 font-chillow">
+    <header>
+        <nav class="navbar">
+            <!-- Navbar content -->
+            <div class="container-fluid">
+                <div class="flex justify-between">
+                    <a class="navbar-brand" href="#">
+                        <img src="../Images/KM_Dark_No_Shadows.png" alt="KM-Logo" width="120" height="24" class="d-inline-block align-text-top">
+                    </a>
+                    <div class="flex gap-8">
+                        <!-- Sign in button -->
+                        <form>
+                            <button id="signin-btn" class="btn-sd">
+                                Sign in
+                            </button>
+                        </form>
+                        <!-- Sign up button -->
+                        <form>
+                            <button id="signup-btn" class="btn-sd">
+                                Sign up
+                            </button>
+                        </form>
+
+                        <dialog id="signin-dialog" class="bg-white p-6 w-96 rounded-2xl">
+                            <h2 class="text-lg mb-4">Sign In</h2>
+                            <form>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2 transition-all duration-300 ease-in-out hover:text-purple-500" for="signin-username">
+                                Username
+                                </label>
+                                <input required class="border rounded w-full py-2 px-3" type="text" id="signin-username" name="username">
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2  transition-all duration-300 ease-in-out hover:text-purple-500" for="signin-password">
+                                Password
+                                </label>
+                                <input required class="border rounded w-full py-2 px-3" type="password" id="signin-password" name="password">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <button class="btn-pr" type="submit">
+                                Khedne Maak!
+                                </button>
+                                <button class="btn-sd" type="button" onclick="closeSigninDialog()">
+                                Cancel
+                                </button>
+                            </div>
+                            </form>
+                        </dialog>
+
+                        <dialog id="signup-dialog" class="bg-white p-6 w-96 rounded-2xl">
+                            <h2 class="text-lg mb-4">Sign Up</h2>
+                            <form>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 mb-2 transition-all duration-300 ease-in-out hover:text-purple-500" for="signup-username">
+                                    Username
+                                    </label>
+                                    <input required class="border rounded w-full py-2 px-3" type="text" id="signup-username" name="username">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 mb-2 transition-all duration-300 ease-in-out hover:text-purple-500" for="signup-phone-nb">
+                                    Phone Number
+                                    </label>
+                                    <input required class="border rounded w-full py-2 px-3" type="text" id="signup-phone-nb" name="phone-nb">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 mb-2 transition-all duration-300 ease-in-out hover:text-purple-500" for="signup-password">
+                                    Password
+                                    </label>
+                                    <input required class="border rounded w-full py-2 px-3" type="password" id="signup-password" name="password">
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <button class="btn-pr" type="submit">
+                                    Khedne Maak!
+                                    </button>
+                                    <button class="btn-sd" type="button" onclick="closeSignupDialog()">
+                                    Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </dialog>
+
+                    </div>
+                </div>
+            </div>
+        </nav>   
+    </header>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 place-content-center">
+            <div class="flex flex-col max-w-xl mx-auto">
+                <div class="mx-auto w-3/4 md:hidden">
+                    <img src="../Images/mobile-bg.png" />
+                </div>
+                <div class="text-4xl lg:text-5xl font-bold text-center ml-32 md:ml-0 lg:ml-28 mb-4">
+                    <img src="../SVGs/KM.svg" />
+                </div>
+                <div class="flex flex-col lg:ml-20 gap-4 mx-auto max-w-md">
+                    <div class="text-lg text-center md:text-left md:text-xl lg:text-2xl xl:text-3xl transition-all duration-300 ease-in-out hover:text-purple-500">
+                        Your social media for ride share.
+                    </div>
+                    <div class="text-sm font-light text-center md:text-left">KM is a logistics tool you can use to save those sweet pennies spent otherwise on gas, and have a cupcake with your friends instead. No need to thank us.
+                    </div>
+                    <div class="flex gap-8 justify-evenly lg:justify-start mt-4">
+                        <button id="create-ride" class="btn-sd">Create Ride</button>
+                        <button id="join-link" class="btn-sd">Join Ride Using Link</button>
+                    </div>
+                    <dialog id="ride-link-dialog" class="bg-white p-6 w-96 rounded-2xl">
+                        <h2 class="text-lg mb-4">Sign In</h2>
+                        <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2 transition-all duration-300 ease-in-out hover:text-purple-500" for="ride-link">
+                            Enter Ride Link
+                            </label>
+                            <input required class="border rounded w-full py-2 px-3" type="text" id="ride-link" name="ride-link">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button class="btn-pr" type="submit">
+                            Khednune Maakun!
+                            </button>
+                            <button class="btn-sd" type="button" onclick="closeLinkDialog()">
+                            Cancel
+                            </button>
+                        </div>
+                        </form>
+                    </dialog>
+                </div>
+            </div>
+            <div class="h-screen w-3/5 fixed top-0 right-0 z-[-1] bg-cover hidden lg:block" style="background-image: url(../Images/bg-img.png)"></div>
+            <div class="fixed top-0 left-0 -ml-4 w-full h-full z-[-1] bg-repeat-y hidden md:block" style="background-image: url(../SVGs/polygon.svg);"></div>
+        </div>
+    </body>
+
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+</body>
+</html>

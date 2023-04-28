@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">  
+    <link href="../dist/output.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/chillow" rel="stylesheet">
+    <title>Ride</title>
+</head>
+<body class="m-4 md:m-8 p-0 font-chillow">
+    <header>
+        <nav class="navbar">
+            <!-- Navbar content -->
+                <div class="container-fluid">
+                    <div class="flex justify-between">
+                        <a class="navbar-brand" href="#">
+                            <img src="../Images/KM_Dark_No_Shadows.png" alt="KM-Logo" width="120" height="24" class="d-inline-block align-text-top">
+                        </a>
+                        <div class="flex gap-8">
+                            <!-- Sign in button -->
+                            <form method="POST" action="/api/signin">
+                                <button type="submit" class="border-2 border-black px-4 py-2 rounded-2xl transition-all duration-300 ease-in-out hover:transform hover:translate-x-2 hover:-translate-y-2 hover:border-purple-500 hover:text-purple-500 active:translate-y-1 active:-translate-x-1 signin-btn">
+                                    Sign in
+                                </button>
+                            </form>
+                            <!-- Sign in button -->
+                            <form method="POST" action="/api/signup">
+                                <button type="submit" class="border-2 border-black px-4 py-2 rounded-2xl transition-all duration-300 ease-in-out hover:transform hover:translate-x-2 hover:-translate-y-2 hover:border-purple-500 hover:text-purple-500 active:translate-y-1 active:-translate-x-1  signup-btn">
+                                    Sign up
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+      </nav>   
+    </header>
+
+      
+</body>
+</html>

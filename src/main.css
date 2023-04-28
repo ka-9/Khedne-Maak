@@ -1,4 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
+
+.btn-pr {
+    border: 2px solid rgb(168, 85, 247);
+    background-color:rgb(168, 85, 247) !important;
+    color: #fff;
+    font-weight: 100;
+}
+
+.btn-sd {
+    border: 2px solid #000;
+    background-color: transparent;
+    color: #000;
+}
+
+.btn-pr, .btn-sd {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+.btn-pr:hover {
+    color: #ffffff;
+}
+
+.btn-sd:hover {
+    color: rgb(168, 85, 247);
+}
+
+.btn-pr:hover, .btn-sd:hover {
+    transform: translate(0.5rem, -0.5rem);
+    border: 2px solid rgb(168, 85, 247);
+}
+
+.btn-pr:active, .btn-sd:active {
+    transform: translateX(-0.2rem) translateY(0.2rem);
+
+}
