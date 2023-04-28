@@ -13,30 +13,49 @@
     <header>
         <nav class="navbar">
             <!-- Navbar content -->
-                <div class="container-fluid">
-                    <div class="flex justify-between">
-                        <a class="navbar-brand" href="#">
-                            <img src="../Images/KM_Dark_No_Shadows.png" alt="KM-Logo" width="120" height="24" class="d-inline-block align-text-top">
-                        </a>
-                        <div class="flex gap-8">
-                            <!-- Sign in button -->
-                            <form method="POST" action="/api/signin">
-                                <button type="submit" class="border-2 border-black px-4 py-2 rounded-2xl transition-all duration-300 ease-in-out hover:transform hover:translate-x-2 hover:-translate-y-2 hover:border-purple-500 hover:text-purple-500 active:translate-y-1 active:-translate-x-1 signin-btn">
-                                    Sign in
-                                </button>
-                            </form>
-                            <!-- Sign in button -->
-                            <form method="POST" action="/api/signup">
-                                <button type="submit" class="border-2 border-black px-4 py-2 rounded-2xl transition-all duration-300 ease-in-out hover:transform hover:translate-x-2 hover:-translate-y-2 hover:border-purple-500 hover:text-purple-500 active:translate-y-1 active:-translate-x-1  signup-btn">
-                                    Sign up
-                                </button>
-                            </form>
-                        </div>
+            <div class="container-fluid">
+                <div class="flex justify-between">
+                    <a class="navbar-brand" href="#">
+                        <img src="../Images/KM_Dark_No_Shadows.png" alt="KM-Logo" width="120" height="24" class="d-inline-block align-text-top">
+                    </a>
+                    <div class="flex gap-8">
+                        <!-- Invite Participants button -->
+                        <form>
+                            <button id="invite-btn" type="button" class="btn-pr">
+                                Invite Friends
+                            </button>
+                        </form>
+                        <!-- Book Seat button -->
+                        <form>
+                            <button id="book-seat-btn" type="button" class="btn-pr">
+                                Book my Seat
+                            </button>
+                        </form>
+                        <!-- Home button -->
+                        <form>
+                            <button id="home-btn" type="button" class="btn-sd">
+                                Back Home
+                            </button>
+                        </form>
                     </div>
                 </div>
-      </nav>   
+            </div>
+        </nav>   
     </header>
-
-      
+    <div class="flex flex-col">
+        <div class="mt-10 mb-4 text-6xl">Summer at Batroun</div>
+        <div class="text-2xl">Departure: [Departure Location] at [Departure Time] (GMT+2)</div>
+        <div class="text-2xl">Destination: [Destination entered]</div>
+    </div>
+    <hr class="border-solid border-black border-2 my-4">
+    <div class="grid grid-cols-2 gap-4">
+        <div class="border-2 border-black w-full h-full">MAP</div>
+        <div class="flex flex-col gap-4 border-2 border-black w-full h-full">
+            <div class="text-xl">Driver information</div>
+            <div class="text-xl">ETA: [Calculated ETA]</div>
+            <div class="text-xl">Participants</div>
+            <div class="text-xl">Vehicle information</div>
+        </div>
+    </div>
 </body>
 </html>

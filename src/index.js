@@ -8,10 +8,12 @@ const rideLinkBtn = document.getElementById('join-link');
 const createRideBtn = document.getElementById('create-ride');
 
 function openSigninDialog() {
+    event.preventDefault();
     signinDialog.showModal();
 }
 
 function openSignupDialog() {
+    event.preventDefault();
     signupDialog.showModal();
 }
 
