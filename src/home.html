@@ -147,11 +147,25 @@
                                 </label>
                                 <input required class="border rounded w-full py-2 px-3" type="text" id="departure-location" name="departure-location">
                             </div>
+                            <div class="flex justify-between gap-2 mb-4">
+                                <div class="w-full mr-4">
+                                    <label class="block text-gray-700 mb-2 transition-all duration-300 ease-in-out hover:text-purple-500" for="departure-time">
+                                    Departure Time
+                                    </label>
+                                    <input required class="border rounded w-full py-2 px-3" type="time" id="departure-time" name="departure-time">
+                                </div>
+                                <div class="w-full">
+                                    <label class="block text-gray-700 mb-2 transition-all duration-300 ease-in-out hover:text-purple-500" for="departure-date">
+                                    Departure Date
+                                    </label>
+                                    <input required class="border rounded w-full py-2 px-3" type="date" id="departure-date" name="departure-date">
+                                </div>
+                            </div>
                             <div class="mb-4">
-                                <label class="block text-gray-700 mb-2 transition-all duration-300 ease-in-out hover:text-purple-500" for="departure-time">
-                                Departure Time
+                                <label class="block text-gray-700 mb-2 transition-all duration-300 ease-in-out hover:text-purple-500">
+                                <input id="same-day-ride" type="checkbox" name="same-day-ride" value="same-day-ride" class="mr-2">
+                                Create ride on the same day
                                 </label>
-                                <input required class="border rounded w-full py-2 px-3" type="time" id="departure-time" name="departure-time">
                             </div>
                             <div class="mb-4">
                                 <label class="block text-gray-700 mb-2 transition-all duration-300 ease-in-out hover:text-purple-500" for="destination">
