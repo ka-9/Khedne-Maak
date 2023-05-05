@@ -31,6 +31,7 @@
                                 Sign up
                             </button>
                         </form>
+                        <div class="flex justify-center items-center w-10 h-10 rounded-full border-2 border-black text-center hover:text-purple-500 hover:border-purple-500 transition-all">K</div>
 
                         <dialog id="signin-dialog" class="bg-white p-6 w-96 rounded-2xl">
                             <h2 class="text-lg mb-4">Sign In</h2>
@@ -109,9 +110,21 @@
                     </div>
                     <div class="text-sm font-light text-center md:text-left">KM is a logistics tool you can use to save those sweet pennies spent otherwise on gas, and have a cupcake with your friends instead. No need to thank us.
                     </div>
-                    <div class="flex gap-8 justify-evenly lg:justify-start mt-4">
-                        <button id="create-ride" class="btn-sd">Create Ride</button>
-                        <button id="join-link" class="btn-sd">Join Ride Using Link</button>
+                    <div class="grid grid-cols-2 gap-8 justify-evenly lg:justify-start mt-4">
+                        <button id="create-ride" class="btn-sd min-w-full">Create Ride</button>
+                        <button id="join-link" class="btn-sd min-w-full">Join Ride Using Link</button>
+                        <div class="flex flex-col items-center gap-2">
+                            <button id="flash-ride" class="btn-sd flex justify-center gap-1 text-center min-w-full">
+                                <span>NEW </span> 
+                                <div> 
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="h-6 w-6 hover:text-purple-500">
+                                    <path fill="currentColor" d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z"/>
+                                    </svg>
+                                </div>      
+                                Flash Ride
+                            </button>
+                            <span class="text-purple-500">No Sign-in Required!</span>
+                        </div>
                     </div>
                     <dialog id="ride-link-dialog" class="bg-white p-6 w-96 rounded-2xl">
                         <h2 class="text-lg mb-4">so you've got a custom link?</h2>
@@ -185,7 +198,7 @@
                     </dialog>
                 </div>
             </div>
-            <div class="h-screen w-3/5 fixed top-0 right-0 z-[-1] bg-cover hidden lg:block" style="background-image: url(../Images/bg-img.png)"></div>
+            <div class="h-screen w-3/5 max-w-6xl fixed top-0 right-0 z-[-1] bg-contain bg-no-repeat bg-center hidden lg:block" style="background-image: url(../Images/bg-img.png); background-size: 120%; background-repeat: no-repeat;"></div>
             <div class="fixed top-0 left-0 -ml-4 w-full h-full z-[-1] bg-repeat-y hidden md:block" style="background-image: url(../SVGs/polygon.svg);"></div>
         </div>
     </body>

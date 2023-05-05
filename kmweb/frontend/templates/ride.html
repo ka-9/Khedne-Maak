@@ -1,0 +1,89 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">  
+    <link rel="stylesheet" type="text/css" href="{% static 'css/output.css' %}">  
+    <link href="../dist/output.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/chillow" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrqnnAVe6iBDdbFBdz1rAVKpjiTPlhxmI" async defer></script>
+    <title>Ride</title>
+</head>
+<body class="m-4 md:m-8 p-0 font-chillow">
+    <header>
+        <nav class="navbar">
+            <!-- Navbar content -->
+            <div class="container-fluid">
+                <div class="flex justify-between">
+                    <a class="navbar-brand" href="#">
+                        <img   src="{% static 'images/KM_Dark_No_Shadows.png' %}"  alt="KM-Logo" width="120" height="24" class="d-inline-block align-text-top">
+                    </a>
+                    <div class="flex gap-8">
+                        <!-- Invite Participants button -->
+                        <form>
+                            <button id="invite-btn" type="button" class="btn-pr text-sm sm:text-xs">
+                                Invite Friends
+                            </button>
+                        </form>
+                        <!-- Book Seat button -->
+                        <form>
+                            <button id="book-seat-btn" type="button" class="btn-pr text-sm sm:text-xs">
+                                Book my Seat
+                            </button>
+                        </form>
+                        <!-- Home button -->
+                        <form>
+                            <button id="home-btn" type="button" class="btn-sd text-sm sm:text-xs">
+                                Back Home
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>   
+    </header>
+    <div class="flex flex-col">
+        <div class="mt-10 mb-4 text-6xl hover:text-purple-500 transition-all">{{ride.name}}</div>
+        <div class="text-2xl"><span class="hover:text-purple-500 transition-all">Departure:</span> {{ride.origin}} at {{ride.time}} (GMT+2)</div>
+        <div class="text-2xl"><span class="hover:text-purple-500 transition-all">Destination:</span>{{ride.destination}}</div>
+    </div>
+
+    <hr class="border-solid border-black border-2 my-4">
+
+    <div class="h-full">
+        <div class="grid grid-cols-4 grid-rows-1 gap-6 h-full">
+            <div id="map" class="border-2 border-transparent rounded-2xl w-full h-full p-4 col-span-2 lg:col-span-3"></div>
+
+            <div class="flex flex-col rounded-2xl gap-4 border-2 border-black w-full p-4 col-start-3 col-span-2 lg:col-span-1 overflow-auto h-fit">
+                <div class="text-lg md:text-xl"><span class="hover:text-purple-500 transition-all">Driver information</span>
+                    <div class="text-sm flex justify-start">
+                        <span>{{ride.host}}</span>
+                        <span class="hover:text-purple-500 transition-all ml-10">+961{{ride.host.phone_number}}</span>
+                    </div>
+                </div>
+                <div class="text-lg md:text-xl hover:text-purple-500 transition-all">ETA: [ETA]</div>
+                <div class="flex flex-col gap-2 text-lg md:text-xl"><span class="hover:text-purple-500 transition-all">Friends</span>
+                    <div class="flex flex-wrap flex-shrink gap-2">
+                        <div class="flex justify-center items-center w-10 h-10 rounded-full border-2 border-black text-center hover:text-purple-500 hover:border-purple-500 transition-all">K</div>
+                        <div class="flex justify-center items-center w-10 h-10 rounded-full border-2 border-black text-center hover:text-purple-500 hover:border-purple-500 transition-all">S</div>
+                        <div class="flex justify-center items-center w-10 h-10 rounded-full border-2 border-black text-center hover:text-purple-500 hover:border-purple-500 transition-all">Y</div>
+                        <div class="flex justify-center items-center w-10 h-10 rounded-full border-2 border-dashed border-black text-center hover:text-purple-500 hover:border-purple-500 transition-all">W</div>
+                    </div>
+                </div>
+                <div class="text-lg md:text-xl flex flex-col gap-2">
+                    <span class="hover:text-purple-500 transition-all">Vehicle information</span>
+                    <div class="flex gap-2 items-center justify-start text-sm"><img src="../SVGs/car-side-solid.svg" class="h-6 w-6"/>Toyota Supra</div>
+                    <div class="flex gap-2 items-center justify-start text-sm"><img src="../SVGs/child-reaching-solid.svg" class="h-6 w-6" /># People</div>
+                    <div class="flex gap-2 items-center justify-start text-sm"><img src="../SVGs/car-on-solid.svg" class="h-6 w-6" /># Seats Left</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="ride.js"></script>
+</body>
+</html>
